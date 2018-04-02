@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+	<name>Custom</name>
+	<author>zwebtheme</author>
+	<creationDate>October 2017</creationDate>
+	<copyright>Copyright (C) 2017 zwebtheme. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>mdsuzonmia01@yahoo.com</authorEmail>
+	<authorUrl>www.zwebtheme.com</authorUrl>
+	<version>1.1.0</version>
+	<description>Zweb Price Module</description>
+	
+	
+	
+	<config>
+		<fields name="params">
+
+			<fieldset name="basic" addfieldpath="/modules/mod_zweb_price/fields">
+
+				<field name="icons" type="icon" label="Icon"   />
+
+			</fieldset>
+		</fields>
+	</config>
+</extension>
