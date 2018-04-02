@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+	<name>Zweb Price</name>
+	<author>zwebtheme</author>
+	<creationDate>October 2017</creationDate>
+	<copyright>Copyright (C) 2017 zwebtheme. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>mdsuzonmia01@yahoo.com</authorEmail>
+	<authorUrl>www.zwebtheme.com</authorUrl>
+	<version>1.1.0</version>
+	<description>Zweb Price Module</description>
+	<files>
+		<filename module="mod_zweb_price">mod_zweb_price.php</filename>
+		<folder>tmpl</folder>
+	</files>
+	
+	
+	<config>
+		<fields name="params">
+
+			<fieldset name="basic" addfieldpath="/modules/mod_zweb_price/fields">
+
+				<field name="icons" type="icon" label="Icon"   />
+
+				
+
+				<field name="title" type="text" label="Title" required="required"  />
+				<field name="currency" type="text" label="Currency" default="$"   />
+				<field name="amount" type="text" label="Amount" required="required"  />
+				<field name="per" type="text" label="Per by" description="use per day OR Per Month etc." hint="Month"  required="required" />
+				<field name="description" type="textarea" required="required"  label="Description" description="use comma (,) for each content." rows="5" cols="5" hint="Example: 100 MB Disk Space, 2 Subdomains" />
+
+				<field name="button" type="text" label="Button Text" required="required"   />
+				<field name="button_link" type="text" label="Button Link" required="required"  />
+				<field name="button_icon" type="icon" label="Button Icon"   />
+				
+
+				<field
+					name="active"
+					type="radio"
+					label="Active"
+					class="btn-group btn-group-yesno"
+					default="0"
+					>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				
+			</fieldset>
+             
+            <fieldset name="layout" label="Layout" addfieldpath="/modules/mod_zweb_price/gender">
+				<field name="gender" type="gender" label="Gender"   />
+			</fieldset>
+
+			<fieldset name="style" label="Style">
+				
+			</fieldset>
+			
+			
+
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC"
+				/>
+
+				<field
+					name="moduleclass_sfx"
+					type="textarea" rows="3"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
+					default="  "
+				/>
+
+				<field
+					name="cache"
+					type="list"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC"
+					default="1"
+					>
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC"
+					default="900"
+				/>
+
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid"
+					>
+					<option value="itemid"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
